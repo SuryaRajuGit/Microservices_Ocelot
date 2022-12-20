@@ -1,0 +1,113 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/login/ocelot",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/login",
+      "UpstreamHttpMethod": [ "POST" ]
+     
+    },
+    {
+      "DownstreamPathTemplate": "/api/account/ocelot",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/account",
+      "UpstreamHttpMethod": [ "POST" ]
+     
+    },
+    {
+      "DownstreamPathTemplate": "/api/add-card/ocelot",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/addcard",
+      "UpstreamHttpMethod": [ "POST" ]
+      
+    },
+    {
+      "DownstreamPathTemplate": "/api/admin/product/ocelot",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/admin/product",
+      "UpstreamHttpMethod": [ "POST" ]
+      
+    }
+    ,
+    {
+      "DownstreamPathTemplate": "/api/product/ocelot",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/product/ocelot",
+      "UpstreamHttpMethod": [ "GET" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/admin/catalog/ocelot",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/admin/catalog",
+      "UpstreamHttpMethod": [ "PUT" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/admin/ocelot",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/admin",
+      "UpstreamHttpMethod": [ "POST" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/cart",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cart",
+      "UpstreamHttpMethod": [ "POST" ]
+
+    }
+
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5000"
+  }
+}
