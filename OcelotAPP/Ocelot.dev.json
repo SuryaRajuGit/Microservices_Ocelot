@@ -104,6 +104,84 @@
       "UpstreamPathTemplate": "/api/cart",
       "UpstreamHttpMethod": [ "POST" ]
 
+    },
+    {
+      "DownstreamPathTemplate": "/api/cart/product/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cart/product/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/cart",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cart",
+      "UpstreamHttpMethod": [ "PUT" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "api/wish-list",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "api/wish-list",
+      "UpstreamHttpMethod": [ "POST" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "api/wish-list/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "api/wish-list/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "api/wish-list/{id}/product/{product-id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "api/wish-list/{id}/product/{product-id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "api/cart/product/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "api/cart/product/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+
     }
 
   ],
