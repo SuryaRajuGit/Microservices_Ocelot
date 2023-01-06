@@ -11,10 +11,10 @@
       ],
       "UpstreamPathTemplate": "/api/login",
       "UpstreamHttpMethod": [ "POST" ]
-     
+
     },
     {
-      "DownstreamPathTemplate": "/api/account/ocelot",
+      "DownstreamPathTemplate": "/api/account",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -23,11 +23,25 @@
         }
       ],
       "UpstreamPathTemplate": "/api/account",
+      "UpstreamHttpMethod": [ "PUT" ]
+
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/cart/create",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cart/create",
       "UpstreamHttpMethod": [ "POST" ]
-     
+
     },
     {
-      "DownstreamPathTemplate": "/api/add-card/ocelot",
+      "DownstreamPathTemplate": "/api/add-card",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -35,24 +49,36 @@
           "Port": 5001
         }
       ],
-      "UpstreamPathTemplate": "/api/addcard",
+      "UpstreamPathTemplate": "/api/add-card",
       "UpstreamHttpMethod": [ "POST" ]
-      
+
     },
     {
-      "DownstreamPathTemplate": "/api/admin/product/ocelot",
+      "DownstreamPathTemplate": "/api/admin/product/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5001
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/admin/product/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/admin/product",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
         }
       ],
       "UpstreamPathTemplate": "/api/admin/product",
       "UpstreamHttpMethod": [ "POST" ]
-      
-    }
-    ,
+
+    },
     {
       "DownstreamPathTemplate": "/api/product/ocelot",
       "DownstreamScheme": "http",
@@ -67,7 +93,7 @@
 
     },
     {
-      "DownstreamPathTemplate": "/api/admin/catalog/ocelot",
+      "DownstreamPathTemplate": "/api/admin/product",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -75,12 +101,12 @@
           "Port": 5002
         }
       ],
-      "UpstreamPathTemplate": "/api/admin/catalog",
+      "UpstreamPathTemplate": "/api/admin/product",
       "UpstreamHttpMethod": [ "PUT" ]
 
     },
     {
-      "DownstreamPathTemplate": "/api/admin/ocelot",
+      "DownstreamPathTemplate": "/api/admin",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -106,6 +132,85 @@
 
     },
     {
+      "DownstreamPathTemplate": "/api/cart",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cart",
+      "UpstreamHttpMethod": [ "PUT" ]
+
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/cart",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cart",
+      "UpstreamHttpMethod": [ "GET" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/cart/wish-list",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cart/wish-list",
+      "UpstreamHttpMethod": [ "POST" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/wish-list",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/wish-list",
+      "UpstreamHttpMethod": [ "POST" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/wish-list/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/wish-list/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/wish-list/{id}/product/{product-id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/wish-list/{id}/product/{product-id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+
+    },
+    {
       "DownstreamPathTemplate": "/api/cart/product/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -119,7 +224,7 @@
 
     },
     {
-      "DownstreamPathTemplate": "/api/cart",
+      "DownstreamPathTemplate": "/api/wish-list",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -127,12 +232,12 @@
           "Port": 5003
         }
       ],
-      "UpstreamPathTemplate": "/api/cart",
-      "UpstreamHttpMethod": [ "PUT" ]
+      "UpstreamPathTemplate": "/api/wish-list",
+      "UpstreamHttpMethod": [ "DELETE" ]
 
     },
     {
-      "DownstreamPathTemplate": "api/wish-list",
+      "DownstreamPathTemplate": "/api/wish-list/product",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -140,12 +245,93 @@
           "Port": 5003
         }
       ],
-      "UpstreamPathTemplate": "api/wish-list",
+      "UpstreamPathTemplate": "/api/wish-list/product",
+      "UpstreamHttpMethod": [ "POST" ]
+
+    },
+
+
+    {
+      "DownstreamPathTemplate": "/api/products",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/products",
+      "UpstreamHttpMethod": [ "GET" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/product/{id}/price",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/product/{id}/price",
+      "UpstreamHttpMethod": [ "GET" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/check-out/product",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/check-out/product",
       "UpstreamHttpMethod": [ "POST" ]
 
     },
     {
-      "DownstreamPathTemplate": "api/wish-list/{id}",
+      "DownstreamPathTemplate": "/api/product/{id}/category/{category-id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/product/{id}/category/{category-id}",
+      "UpstreamHttpMethod": [ "GET" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/account/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/account/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/account/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/account/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/user/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -153,25 +339,38 @@
           "Port": 5003
         }
       ],
-      "UpstreamPathTemplate": "api/wish-list/{id}",
+      "UpstreamPathTemplate": "/api/user/{id}",
       "UpstreamHttpMethod": [ "DELETE" ]
 
     },
     {
-      "DownstreamPathTemplate": "api/wish-list/{id}/product/{product-id}",
+      "DownstreamPathTemplate": "/api/product/update",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5003
+          "Port": 5002
         }
       ],
-      "UpstreamPathTemplate": "api/wish-list/{id}/product/{product-id}",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamPathTemplate": "/api/product/update",
+      "UpstreamHttpMethod": [ "PUT" ]
 
     },
     {
-      "DownstreamPathTemplate": "api/cart/product/{id}",
+      "DownstreamPathTemplate": "/api/cart/products",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cart/products",
+      "UpstreamHttpMethod": [ "POST" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/check-out/cart",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -179,10 +378,154 @@
           "Port": 5003
         }
       ],
-      "UpstreamPathTemplate": "api/cart/product/{id}",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamPathTemplate": "/api/check-out/cart",
+      "UpstreamHttpMethod": [ "POST" ]
 
+    },
+    {
+      "DownstreamPathTemplate": "/api/check-out/details",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/check-out/details",
+      "UpstreamHttpMethod": [ "POST" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/check-out",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/check-out",
+      "UpstreamHttpMethod": [ "POST" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/upi",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/upi",
+      "UpstreamHttpMethod": [ "POST" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/upi",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/upi",
+      "UpstreamHttpMethod": [ "PUT" ]
+
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/cart/products/qunatity",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cart/products/quantity",
+      "UpstreamHttpMethod": [ "POST" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/cart/products/price",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cart/products/price",
+      "UpstreamHttpMethod": [ "POST" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/product/details",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/product/details",
+      "UpstreamHttpMethod": [ "POST" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/wish-list/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/wish-list/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/wish-list/product/details",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/wish-list/product/details",
+      "UpstreamHttpMethod": [ "POST" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/card/account",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/card/account",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/payment/account/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/payment/account/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
     }
+
+
 
   ],
   "GlobalConfiguration": {
