@@ -67,6 +67,19 @@
 
     },
     {
+      "DownstreamPathTemplate": "/api/category/names",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/category/names",
+      "UpstreamHttpMethod": [ "GET" ]
+
+    },
+    {
       "DownstreamPathTemplate": "/api/admin/product",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -93,7 +106,7 @@
 
     },
     {
-      "DownstreamPathTemplate": "/api/admin/product",
+      "DownstreamPathTemplate": "/api/admin/product/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -101,7 +114,7 @@
           "Port": 5002
         }
       ],
-      "UpstreamPathTemplate": "/api/admin/product",
+      "UpstreamPathTemplate": "/api/admin/product/{id}",
       "UpstreamHttpMethod": [ "PUT" ]
 
     },
@@ -132,7 +145,7 @@
 
     },
     {
-      "DownstreamPathTemplate": "/api/cart",
+      "DownstreamPathTemplate": "/api/cart/product/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -140,7 +153,7 @@
           "Port": 5003
         }
       ],
-      "UpstreamPathTemplate": "/api/cart",
+      "UpstreamPathTemplate": "/api/cart/product/{id}",
       "UpstreamHttpMethod": [ "PUT" ]
 
     },
@@ -291,7 +304,7 @@
 
     },
     {
-      "DownstreamPathTemplate": "/api/product/{id}/category/{category-id}",
+      "DownstreamPathTemplate": "/api/product/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -299,12 +312,12 @@
           "Port": 5002
         }
       ],
-      "UpstreamPathTemplate": "/api/product/{id}/category/{category-id}",
+      "UpstreamPathTemplate": "/api/product/{id}",
       "UpstreamHttpMethod": [ "GET" ]
 
     },
     {
-      "DownstreamPathTemplate": "/api/account/{id}",
+      "DownstreamPathTemplate": "/api/account",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -312,12 +325,12 @@
           "Port": 5001
         }
       ],
-      "UpstreamPathTemplate": "/api/account/{id}",
+      "UpstreamPathTemplate": "/api/account",
       "UpstreamHttpMethod": [ "GET" ]
 
     },
     {
-      "DownstreamPathTemplate": "/api/account/{id}",
+      "DownstreamPathTemplate": "/api/account",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -325,7 +338,7 @@
           "Port": 5001
         }
       ],
-      "UpstreamPathTemplate": "/api/account/{id}",
+      "UpstreamPathTemplate": "/api/account",
       "UpstreamHttpMethod": [ "DELETE" ]
 
     },
@@ -422,7 +435,7 @@
 
     },
     {
-      "DownstreamPathTemplate": "/api/upi",
+      "DownstreamPathTemplate": "/api/upi/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -430,7 +443,7 @@
           "Port": 5001
         }
       ],
-      "UpstreamPathTemplate": "/api/upi",
+      "UpstreamPathTemplate": "/api/upi/{id}",
       "UpstreamHttpMethod": [ "PUT" ]
 
     },
@@ -513,7 +526,7 @@
       "UpstreamHttpMethod": [ "PUT" ]
     },
     {
-      "DownstreamPathTemplate": "/api/payment/account/{id}",
+      "DownstreamPathTemplate": "/api/payment",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -521,7 +534,7 @@
           "Port": 5001
         }
       ],
-      "UpstreamPathTemplate": "/api/payment/account/{id}",
+      "UpstreamPathTemplate": "/api/payment",
       "UpstreamHttpMethod": [ "GET" ]
     },
     {
@@ -537,7 +550,7 @@
       "UpstreamHttpMethod": [ "GET" ]
     },
     {
-      "DownstreamPathTemplate": "/api/order/{id}",
+      "DownstreamPathTemplate": "/api/bill/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -545,11 +558,11 @@
           "Port": 5003
         }
       ],
-      "UpstreamPathTemplate": "/api/order/{id}",
+      "UpstreamPathTemplate": "/api/bill/{id}",
       "UpstreamHttpMethod": [ "GET" ]
     },
     {
-      "DownstreamPathTemplate": "/api/order",
+      "DownstreamPathTemplate": "/api/bill",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -557,7 +570,7 @@
           "Port": 5003
         }
       ],
-      "UpstreamPathTemplate": "/api/order",
+      "UpstreamPathTemplate": "/api/bill",
       "UpstreamHttpMethod": [ "GET" ]
     }
 
